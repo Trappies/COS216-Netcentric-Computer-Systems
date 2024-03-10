@@ -1,0 +1,194 @@
+/*
+Joshua Garner
+22502883
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 0px ;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo{
+    width: 150px;
+    position: center;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    max-height: 800px;
+    padding: 20px;
+    text-align: left;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 100px;
+    transform: translateY(25%);
+    line-height: 2;
+    background: cadetblue;
+    border: 6px solid #FF731A;
+    border-radius: 25px;
+    font-weight: bold;
+    float: left;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+select {
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 5px solid #FF731A;
+    border-radius: 25px;
+    background-color: #009688;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    border: 4px solid black;
+    cursor: pointer;
+}
+
+.product-container {
+    margin: auto;
+    position: absolute;
+    top: 52%;
+    left: 60%;
+    transform: translate(-40%, -50%);
+    width: 60%;
+    height: 60%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 15px;
+    display: inline-table;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+  }
+}
+
+.product-card {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: cadetblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 6px solid #FF731A;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.product-card img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-card h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.no-results {
+  font-size: 4em;
+}
