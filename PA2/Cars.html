@@ -1,0 +1,63 @@
+<!--
+Joshua Garner
+22502883
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cars</title>
+        <link rel="stylesheet" href="css/carStyles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="navbar">
+            <img src="img/LogoAA.png" class="logo">
+            <ul>
+                <li><a href="Cars.html">Home</a></li>
+                <li><a href="Cars.html">Cars</a></li>
+                <li><a href="Brands.html">Brands</a></li>
+                <li><a href="FindCar.html">Find Me a Car</a></li>
+                <li><a href="Compare.html">Compare</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <form action="" class="searchbar" id="search-form">
+                <input type="text" placeholder="Search" name="q" autocomplete="off">
+                <button type="button" id="search"><img src="img/search.png"></button>
+            </form>
+            <div id="loading"></div>
+            
+            <div id="search-results"></div>
+        </div>
+            
+    <table id="carproducts" class="product-container">
+    </table>
+        
+        
+
+    <div class="sort">
+        <select class="s">
+              <option value="option1" selected>Sort by</option>
+              <option value="option2">Name ASC</option>
+              <option value="option3">Name DESC</option>
+              <option value="option4">Year ASC</option>
+              <option value="option5">Name DESC</option>
+        </select>
+    </div>
+
+    <div class="filter">
+        <select class="f">
+            <option value="option1" selected>Filter</option>
+            <option value="option2">Automatic</option>
+            <option value="option3">Manual</option>
+            <option value="option4">New</option>
+            <option value="option5">Pre-Owned</option>
+        </select>
+    </div>
+        <script src="js/cars.js"></script>
+    </body>
+</html>
