@@ -1,0 +1,119 @@
+<!--
+Joshua Garner
+22502883
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/findStyles.css">
+    </head>
+    
+    <div class="banner">
+        <div class="navbar">
+            <img src="img/LogoAA.png" class="logo">
+            <ul>
+                <li><a href="Cars.html">Home</a></li>
+                <li><a href="Cars.html">Cars</a></li>
+                <li><a href="Brands.html">Brands</a></li>
+                <li><a href="FindCar.html">Find Me a Car</a></li>
+                <li><a href="Compare.html">Compare</a></li>
+            </ul>
+        </div>
+        
+        <body>
+        <title>Find Me A Car</title>
+            <div class="container">
+                <h1>Find Your Car</h1>
+                    <form>
+                        <label>* Do you need airbags?
+                            <input type="checkbox" name="airbags" value="Yes">Yes
+                            <input type="checkbox" name="airbags" value="No">No
+                        </label>
+                        
+                        <label>* What Transmission do you want?
+                            <input type="checkbox" name="transmission" value="Automatic">Automatic
+                            <input type="checkbox" name="transmission" value="Manual">Manual
+                        </label>
+                        
+                        <label>* What Fuel Type do you want?
+                            <input type="checkbox" name="fuel" value="Petrol">Petrol
+                            <input type="checkbox" name="fuel" value="Diesel">Diesel
+                            <input type="checkbox" name="fuel" value="Electric">Electric
+                        </label>
+                        
+                        <label>* Choose a Brand:
+                            <select name="make">
+                                <option value="">--Please choose an option--</option>
+                                <option value="Tesla">Tesla</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Audi">Audi</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Aston Martin">Aston Martin</option>
+                                <option value="Mercedes">Mercedes</option>
+                                <option value="Porsche">Porsche</option>
+                                <option value="Jaguar">Jaguar</option>
+                                <option value="Koenigsegg">Koenigsegg</option>
+                                <option value="Ferrari">Ferrari</option>
+                            </select>
+                        </label>
+                        
+                        <label>Choose a Model:
+                            <select name="model">
+                                <option value="">--Please choose an option--</option>
+                                <option value="Model S">Model S</option>
+                                <option value="488 GTB">488 GTB</option>
+                                <option value="R8">R8</option>
+                                <option value="GT-R">GT-R</option>
+                                <option value="Vantage">Vantage</option>
+                            </select>
+                        </label>
+                        
+                        <label>Choose a Color:
+                            <input type="radio" name="color1" value="Black">Black
+                            <input type="radio" name="color2" value="Red">Red
+                            <input type="radio" name="color3" value="White">White
+                            <input type="radio" name="color4" value="Grey">Grey
+                            <input type="radio" name="color5" value="Green">Green
+                        </label>
+                            <button type="submit">Search</button>
+	               </form>
+            </div>
+        </body>
+        
+    <table class="product-container">
+        <tr>
+            <td class="product-card">
+                  <img src="img/Car1.png" alt="Product 1">
+                  <h2>Tesla Model S</h2>
+            </td>
+            <td class="product-card">
+                  <img src="img/Car3.png" alt="Product 2">
+                  <h2>Audi R8</h2>
+            </td>
+            <td class="product-card">
+                  <img src="img/Car5.png" alt="Product 3">
+                  <h2>Aston Martin Vantage</h2>
+            </td>
+        </tr>
+    </table>
+        
+    <table class="product-container">
+        <tr>
+            <td class="product-card">
+                  <img src="img/Car2.png" alt="Product 1">
+                  <h2>Ferrari 488 GTB</h2>
+            </td>
+            <td class="product-card">
+                  <img src="img/Car4.png" alt="Product 2">
+                  <h2>Nissan GT-R</h2>
+            </td>
+            <td class="product-card">
+                  <img src="img/Car6.png" alt="Product 3">
+                  <h2>Porsche 911</h2>
+            </td>
+        </tr>
+    </table>
+        
+    </div>
+</html>
