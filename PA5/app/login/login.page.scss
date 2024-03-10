@@ -1,0 +1,122 @@
+.login-content {
+  --ion-background-color: transparent;
+  --ion-text-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(45deg, rgba(58, 58, 180, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(255, 81, 0, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+
+  .logo {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.login-form {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: linear-gradient(90deg, rgba(58, 58, 180, 1) 0%, rgba(0, 0, 0, 0.2497373949579832) 50%, rgba(255, 81, 0, 1) 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin: auto;
+  margin-top: 20px;
+}
+
+ion-item {
+  --color: #fff;
+  --placeholder-color: #a3a3a3;
+  --highlight-color-focused: #fff;
+  --highlight-color-invalid: #ff3d71;
+  --highlight-color-valid: #28a745;
+  --border-color: transparent;
+}
+
+ion-input {
+  border-radius: 20px;
+}
+
+ion-button {
+  margin-top: 20px;
+  --ion-background-color: #ff4081;
+  --ion-text-color: #fff;
+  --ion-color-hover: #e0407b;
+  --ion-color-activated: #ff4081;
+  --border-radius: 20px;
+  --padding-start: 40px;
+  --padding-end: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+ion-button::part(native) {
+  border-radius: 20px;
+}
+
+ion-button::part(native):after {
+  border-radius: 20px;
+}
+
+ion-button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-button::part(ripple) {
+  border-radius: 20px;
+}
+
+ion-button::part(ripple):after {
+  border-radius: 20px;
+}
+
+ion-button.ion-activatable:hover::before,
+ion-button.ion-activatable:focus::before {
+  border-radius: 20px;
+}
+
+ion-button.ion-activatable:active::before {
+  border-radius: 20px;
+}
+
+ion-button.ion-activatable.ion-activated::before {
+  border-radius: 20px;
+}
+
+ion-button.ion-focus::before {
+  border-radius: 20px;
+}
+
+ion-button.ion-focus::after {
+  border-radius: 20px;
+}
+
+ion-button.ion-activatable.ion-focus::before {
+  border-radius: 20px;
+}
+
+ion-button.ion-activatable.ion-focus::after {
+  border-radius: 20px;
+}
+
+ion-button.ion-activatable:hover::before,
+ion-button.ion-activatable:focus::before {
+  border-radius: 20px;
+}
+
+ion-button.ion-activatable:active::before {
+  border-radius: 20px;
+}

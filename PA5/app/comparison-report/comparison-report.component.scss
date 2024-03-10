@@ -1,0 +1,60 @@
+/* comparison-report.component.scss */
+
+ion-header {
+  ion-toolbar {
+    --ion-toolbar-background: #222;
+  }
+
+  ion-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+ion-content {
+  --ion-background-color: #333;
+  color: #fff;
+}
+
+.comparison-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+ion-label {
+  font-weight: bold;
+  color: #fff;
+}
+
+ion-note {
+  font-weight: bold;
+  color: #ccc;
+}
+
+.comparison-item.strong {
+  font-weight: bold;
+}
+
+.comparison-item #better {
+  background-color: linear-gradient(110.1deg, rgb(34, 126, 34) 2.9%, rgb(168, 251, 60) 90.3%);
+}
+
+.comparison-item #worse {
+  background-color: #ff6666;
+}
+
+ion-button {
+  margin: 20px;
+}
+
+#better {
+  background-color: #00cc66;
+}
+
+#worse {
+  background-color: #ff6666;
+}

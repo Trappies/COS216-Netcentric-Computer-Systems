@@ -1,0 +1,45 @@
+// ion-content {
+//   ion-button {
+//     margin-top: 20px;
+//   }
+// }
+
+.dark {
+  ion-content {
+    --background: #181818;
+    --ion-text-color: #fff;
+  }
+
+  /* ... other dark theme styles ... */
+}
+
+.light {
+  ion-content {
+    --background: #ffffff;
+    --ion-text-color: #000000;
+  }
+
+  /* ... other light theme styles ... */
+}
+
+.ion-padding {
+  --ion-animation-duration: 300ms;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

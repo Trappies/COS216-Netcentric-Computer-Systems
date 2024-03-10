@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Compare Cars
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchQuery" (ionChange)="updateSuggestions()" show-clear-button="focus" value="Show on Focus"></ion-searchbar>
+
+  <div class="suggestions" *ngIf="showSuggestions">
+    <ion-list>
+      <ion-item *ngFor="let suggestion of searchSuggestions" (click)="selectCar(suggestion)">
+        {{ suggestion.make }} {{ suggestion.model }}
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="car-container">
+    <ion-card *ngFor="let car of selectedCars" class="car-card">
+      <ion-img [src]="car.image" [alt]="car.make + ' ' + car.model"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{ car.make }} {{ car.model }}</ion-card-title>
+        <div class="car-details">
+          <p><strong>Max Speed:</strong> {{ car.max_speed_km_per_h }} km/h</p>
+          <p><strong>Body Type:</strong> {{ car.body_type }}</p>
+          <p><strong>Engine Type:</strong> {{ car.engine_type }}</p>
+          <p><strong>Transmission:</strong> {{ car.transmission }}</p>
+          <p><strong>Drive Wheels:</strong> {{ car.drive_wheels }}</p>
+          <p><strong>Year:</strong> {{ car.year_from }}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-button expand="full" [disabled]="selectedCars.length !== 2" (click)="compareCars()">Compare</ion-button>

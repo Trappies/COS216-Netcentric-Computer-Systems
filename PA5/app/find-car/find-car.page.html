@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Find Car
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Make:</ion-label>
+      <ion-input [(ngModel)]="make"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Max Speed (km/h):</ion-label>
+      <ion-input type="number" [(ngModel)]="maxSpeed"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Body Type:</ion-label>
+      <ion-select [(ngModel)]="bodyType">
+        <ion-select-option value="">Any</ion-select-option>
+        <ion-select-option value="sedan">Sedan</ion-select-option>
+        <ion-select-option value="suv">SUV</ion-select-option>
+        <ion-select-option value="hatchback">Hatchback</ion-select-option>
+        <ion-select-option value="crossover">Crossover</ion-select-option>
+        <ion-select-option value="coupe">Coupe</ion-select-option>
+        <ion-select-option value="wagon">Wagon</ion-select-option>
+        <ion-select-option value="minivan">Minivan</ion-select-option>
+        <ion-select-option value="pickup">Pickup</ion-select-option>
+        <ion-select-option value="roadster">Roadster</ion-select-option>
+        <!-- Add more options as needed -->
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Engine Type:</ion-label>
+      <ion-select [(ngModel)]="engineType">
+        <ion-select-option value="">Any</ion-select-option>
+        <ion-select-option value="gasoline">Gasoline</ion-select-option>
+        <ion-select-option value="diesel">Diesel</ion-select-option>
+        <!-- Add more options as needed -->
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Transmission:</ion-label>
+      <ion-select [(ngModel)]="transmission">
+        <ion-select-option value="">Any</ion-select-option>
+        <ion-select-option value="manual">Manual</ion-select-option>
+        <ion-select-option value="automatic">Automatic</ion-select-option>
+        <!-- Add more options as needed -->
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Wheel Drive:</ion-label>
+      <ion-select [(ngModel)]="driveWheels">
+        <ion-select-option value="">Any</ion-select-option>
+        <ion-select-option value="front">Front Wheel Drive</ion-select-option>
+        <ion-select-option value="rear">Rear Wheel Drive</ion-select-option>
+        <ion-select-option value="all">All Wheel Drive</ion-select-option>
+        <ion-select-option value="all">Four Wheel Drive</ion-select-option>
+        <!-- Add more options as needed -->
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Year:</ion-label>
+      <ion-input type="number" pattern="[0-9]{4}" [(ngModel)]="yearFrom"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="filterCars()">Filter</ion-button>
+
+  <div class="car-list" *ngIf="filteredCars && filteredCars.length > 0">
+    <ion-card *ngFor="let car of filteredCars">
+      <ion-img [src]="car.image" [alt]="car.make + ' ' + car.model"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{ car.make }} {{ car.model }}</ion-card-title>
+        <button class="details-button" (click)="toggleCardDetails(car)">Show Details</button>
+        <div class="card-details" *ngIf="car.showDetails">
+          <p>Max Speed: {{ car.max_speed_km_per_h }} km/h</p>
+          <p>Body Type: {{ car.body_type }}</p>
+          <p>Engine Type: {{ car.engine_type }}</p>
+          <p>Transmission: {{ car.transmission }}</p>
+          <p>Drive Wheels: {{ car.drive_wheels }}</p>
+          <p>Year: {{ car.year_from }}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="no-results" *ngIf="filteredCars && filteredCars.length === 0">
+    No results found.
+  </div>
+</ion-content>

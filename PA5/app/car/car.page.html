@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cars
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content (ionRefresh)="refreshData($event)" [ngClass]="{ 'dark-theme': isDarkModeEnabled() }">
+  <ion-spinner *ngIf="isLoading"></ion-spinner>
+  <div class="car-list" *ngIf="cars && cars.length > 0">
+    <ion-card *ngFor="let car of cars">
+      <ion-img [src]="car.image" [alt]="car.make + ' ' + car.model"></ion-img>
+      <ion-card-content>
+        <ion-card-title>{{ car.make }} {{ car.model }}</ion-card-title>
+        <button class="details-button" (click)="toggleCardDetails(car)">Show Details</button>
+        <div class="card-details" *ngIf="car.showDetails">
+          <p>Max Speed: {{ car.max_speed_km_per_h }} km/h</p>
+          <p>Body Type: {{ car.body_type }}</p>
+          <p>Engine Type: {{ car.engine_type }}</p>
+          <p>Transmission: {{ car.transmission }}</p>
+          <p>Drive Wheels: {{ car.drive_wheels }}</p>
+          <p>Year: {{ car.year_from }}</p>
+        </div>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+  <div class="no-results" *ngIf="cars && cars.length === 0">
+    No results found.
+  </div>
+
+  <ion-refresher slot="fixed">
+    <ion-refresher-content
+      pullingIcon="arrow-down-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+    ></ion-refresher-content>
+  </ion-refresher>
+</ion-content>

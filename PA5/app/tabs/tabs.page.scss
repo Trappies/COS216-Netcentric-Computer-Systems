@@ -1,0 +1,52 @@
+ion-tab-button {
+  --color: var(--ion-color-primary);
+}
+
+ion-tab-button[aria-selected=true] {
+  --color: var(--ion-color-secondary);
+}
+
+ion-tab-button:hover {
+  --color: var(--ion-color-tertiary);
+}
+
+ion-tab-button.drag {
+  --color: var(--ion-color-danger);
+}
+
+.tab-bar {
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #0002;
+
+  &:hover {
+    background-color: #0002;
+  }
+
+  .tab-button {
+    transition: 0.5s;
+
+    &:hover {
+      color: #fff;
+      background-color: #0004;
+    }
+  }
+
+  .tab-button .ion-icon {
+    transition: 0.5s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .tab-button.active {
+    background-color: #0004;
+    color: #fff;
+  }
+}
+
+
